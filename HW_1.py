@@ -1,4 +1,4 @@
-Around 1:
+#Around 1:
 put()
 move()
 x = object_here()
@@ -11,7 +11,7 @@ for i in range(4):
     turn_left()
 
 
-Around 1 - variable:
+#Around 1 - variable:
 put()
 move()
 x = object_here()
@@ -24,7 +24,7 @@ for i in range(5):
     turn_left()
 
 
-Around 1 - apple:
+#Around 1 - apple:
 x = object_here()
 for i in range(4):
     while(front_is_clear()):
@@ -35,7 +35,7 @@ for i in range(4):
     turn_left()
    
    
-Around 2:
+#Around 2:
 put()
 x = object_here()
 move()
@@ -56,7 +56,7 @@ for i in range(7):
         turn_left()
 
 
-Around 3:
+#Around 3:
 turn_left()
 put()
 x = object_here()
@@ -80,7 +80,7 @@ while(True):
         turn_left()
    
    
-Around 4:
+#Around 4:
 turn_left()
 turn_left()
 put()
@@ -105,7 +105,7 @@ while(True):
         turn_left()
         
         
-Center 1:
+#Center 1:
 x = 0
 while(front_is_clear()):
     move()
@@ -117,7 +117,7 @@ for i in range(int(x/2)):
 put()
 
 
-Center 2:
+#Center 2:
 turn_left()
 x = 0
 while(front_is_clear()):
@@ -130,7 +130,7 @@ for i in range(int(x/2)):
 put()
 
 
-Harvest 1:
+#Harvest 1:
 def harvest_one_row1():
     for _ in range(6):
         move()
@@ -171,7 +171,7 @@ for i in range(6):
 
 
 
-Harvest 2:
+#Harvest 2:
 def harvest_one_row1():
     for _ in range(6):
         move()
@@ -211,7 +211,7 @@ for i in range(6):
 
     
     
-Harvest 3:
+#Harvest 3:
 think(50)
 def harvest_one_row1():
     for _ in range(6):
@@ -253,7 +253,7 @@ for i in range(6):
 
 
 
-Hurdle 1:
+#Hurdle 1:
 think(20)
 def jump():
     move()
@@ -274,7 +274,7 @@ for i in range(6):
     
     
 
-Hurdle 2:
+#Hurdle 2:
 think(20)
 def jump():
     move()
@@ -295,7 +295,7 @@ while(at_goal() == False):
 
 
 
-Hurdle 3:
+#Hurdle 3:
 think(20)
 def jump():
     turn_left()
@@ -317,7 +317,7 @@ while(at_goal() == False):
 
 
 
-Hurdle 4:
+#Hurdle 4:
 think(20)
 def jump():
     turn_left()
@@ -342,7 +342,7 @@ while(at_goal() == False):
 
 
 
-Maze:
+#Maze:
 think(20)
 while(at_goal() == False):
     if(right_is_clear() == True):
@@ -359,7 +359,7 @@ while(at_goal() == False):
         
  
  
-Newspaper 0:
+#Newspaper 0:
 think(20)
 take()
 x = 0
@@ -384,6 +384,41 @@ def step_down():
 for i in range(3):
     step_up()
 put()
+turn_left()
+turn_left()
+
+for i in range(3):
+    step_down()
+
+    
+    
+#Newspaper 1:
+think(20)
+take()
+x = 0
+def step_up():
+    turn_left()
+    move()
+    turn_left()
+    turn_left()
+    turn_left()
+    move()
+    move()
+    
+def step_down():
+    move()
+    move()
+    turn_left()
+    move()
+    turn_left()
+    turn_left()
+    turn_left()
+    
+for i in range(3):
+    step_up()
+while object_here() == ['token']:
+    take()
+put('star')
 turn_left()
 turn_left()
 
